@@ -18,12 +18,11 @@ const KitchenSink = () => {
 
       {/* Word of the Day Card Preview */}
       <View style={styles.box}>
-        <Text style={styles.label}>Word of the Day Card</Text>
+        <Text style={styles.label}>Word of the Day Card (Front)</Text>
 
         <View style={styles.wotdCard}>
           <Text style={styles.wotdWord}>Kumusta</Text>
           <Text style={styles.wotdPhrase}>"Kumusta ka na?"</Text>
-
           <Text style={styles.wotdReveal}>Tap to reveal</Text>
 
           <View style={styles.wotdIconRow}>
@@ -33,6 +32,17 @@ const KitchenSink = () => {
         </View>
 
         <Text style={styles.wotdDate}>Word of the Day — February 9, 2026</Text>
+      </View>
+
+      {/* Word of the Day Card (Revealed State) */}
+      <View style={styles.box}>
+        <Text style={styles.label}>Word of the Day Card (Revealed)</Text>
+
+        <View style={styles.wotdCard}>
+          <Text style={styles.wotdWord}>Kumusta</Text>
+          <Text style={styles.wotdPhrase}>Definition: to greet, to ask how someone is</Text>
+          <Text style={styles.wotdReveal}>Tap to hide</Text>
+        </View>
       </View>
 
       {/* Reusable Promo Card Preview */}

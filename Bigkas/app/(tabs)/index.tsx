@@ -1,9 +1,15 @@
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default function Index() {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Hello</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+  },
+});

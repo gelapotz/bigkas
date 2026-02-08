@@ -17,7 +17,6 @@ export default function Index() {
         <Text style={styles.cardPhrase}>"Kumusta ka na?"</Text>
 
         <Text style={styles.cardReveal}>Tap to reveal</Text>
-        <Text style={styles.cardDate}>Word of the Day — February 9, 2026</Text>
 
         {/* Icons Row */}
         <View style={styles.iconRow}>
@@ -25,6 +24,9 @@ export default function Index() {
           <Ionicons name="volume-high-outline" size={24} color="#555" />
         </View>
       </View>
+
+      {/* Date below the card */}
+      <Text style={styles.cardDate}>Word of the Day — February 9, 2026</Text>
 
       <Text>Hello</Text>
     </ScrollView>
@@ -47,35 +49,45 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 20,
   },
+
   card: {
     backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 16,
-    marginBottom: 20,
+    marginBottom: 8,
+    alignItems: 'center', // centers all children horizontally
   },
+
   cardWord: {
     fontSize: 28,
     fontWeight: '700',
     marginBottom: 8,
+    textAlign: 'center',
   },
   cardPhrase: {
     fontSize: 16,
     color: '#444444',
     marginBottom: 16,
+    textAlign: 'center',
   },
   cardReveal: {
     fontSize: 14,
     color: '#777777',
-    marginBottom: 12,
-  },
-  cardDate: {
-    fontSize: 12,
-    color: '#999999',
     marginBottom: 16,
+    textAlign: 'center',
   },
+
   iconRow: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     gap: 16,
+  },
+
+  /* Date below the card */
+  cardDate: {
+    fontSize: 12,
+    color: '#777',
+    textAlign: 'center',
+    marginBottom: 20,
   },
 });

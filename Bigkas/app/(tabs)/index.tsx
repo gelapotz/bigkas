@@ -1,4 +1,5 @@
 import { ScrollView, Text, StyleSheet, TextInput, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function Index() {
   return (
@@ -17,6 +18,12 @@ export default function Index() {
 
         <Text style={styles.cardReveal}>Tap to reveal</Text>
         <Text style={styles.cardDate}>Word of the Day — February 9, 2026</Text>
+
+        {/* Icons Row */}
+        <View style={styles.iconRow}>
+          <Ionicons name="bookmark-outline" size={24} color="#555" />
+          <Ionicons name="volume-high-outline" size={24} color="#555" />
+        </View>
       </View>
 
       <Text>Hello</Text>
@@ -64,5 +71,11 @@ const styles = StyleSheet.create({
   cardDate: {
     fontSize: 12,
     color: '#999999',
+    marginBottom: 16,
+  },
+  iconRow: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    gap: 16,
   },
 });

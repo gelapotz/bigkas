@@ -1,4 +1,4 @@
-import { ScrollView, Text, StyleSheet, View, TextInput, TouchableOpacity } from 'react-native';
+import { ScrollView, Text, StyleSheet, View, TextInput, TouchableOpacity, Switch } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 const KitchenSink = () => {
@@ -52,6 +52,25 @@ const KitchenSink = () => {
           <TouchableOpacity style={styles.cardButton}>
             <Text style={styles.cardButtonText}>Button</Text>
           </TouchableOpacity>
+        </View>
+      </View>
+
+      {/* Fixed Trial Component */}
+      <View style={styles.box}>
+        <Text style={styles.label}>Fixed Trial Component</Text>
+
+        <View style={styles.trialContainer}>
+          <View>
+            <Text style={styles.trialTitle}>Activate 7-day free trial</Text>
+            <Text style={styles.trialSubtitle}>Talk to Bigkas and get instant AI corrections</Text>
+          </View>
+
+          <Switch
+            value={false}
+            onValueChange={() => {}}
+            thumbColor={'#FFF'}
+            trackColor={{ false: '#CCC', true: '#BFD0FF' }}
+          />
         </View>
       </View>
 
@@ -182,5 +201,24 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontWeight: '600',
     fontSize: 14,
+  },
+
+  /* Fixed Trial Component */
+  trialContainer: {
+    backgroundColor: '#E8D8FF',
+    padding: 16,
+    borderRadius: 16,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  trialTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#0038A8',
+  },
+  trialSubtitle: {
+    fontSize: 14,
+    color: '#444',
   },
 });

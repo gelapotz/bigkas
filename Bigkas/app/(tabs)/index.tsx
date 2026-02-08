@@ -1,4 +1,4 @@
-import { ScrollView, Text, StyleSheet, TextInput } from 'react-native';
+import { ScrollView, Text, StyleSheet, TextInput, View } from 'react-native';
 
 export default function Index() {
   return (
@@ -9,6 +9,12 @@ export default function Index() {
         style={styles.search}
         placeholder="Search words"
       />
+
+      {/* Word of the Day Card */}
+      <View style={styles.card}>
+        <Text style={styles.cardWord}>Kumusta</Text>
+        <Text style={styles.cardPhrase}>"Kumusta ka na?"</Text>
+      </View>
 
       <Text>Hello</Text>
     </ScrollView>
@@ -30,5 +36,20 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 8,
     marginBottom: 20,
+  },
+  card: {
+    backgroundColor: '#ffffff',
+    padding: 20,
+    borderRadius: 16,
+    marginBottom: 20,
+  },
+  cardWord: {
+    fontSize: 28,
+    fontWeight: '700',
+    marginBottom: 8,
+  },
+  cardPhrase: {
+    fontSize: 16,
+    color: '#444444',
   },
 });

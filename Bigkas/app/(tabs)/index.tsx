@@ -19,20 +19,16 @@ export default function Index() {
 
         <Text style={styles.cardReveal}>Tap to reveal</Text>
 
-        {/* Icons Row */}
         <View style={styles.iconRow}>
           <Ionicons name="bookmark-outline" size={24} color="#4A6CFF" />
           <Ionicons name="volume-high-outline" size={24} color="#4A6CFF" />
         </View>
       </View>
 
-      {/* Date below the card */}
       <Text style={styles.cardDate}>Word of the Day — February 9, 2026</Text>
 
       {/* Weekly Challenge Card */}
       <View style={styles.promoCard}>
-
-        {/* Image Placeholder */}
         <View style={styles.promoImage} />
 
         <Text style={styles.promoTitle}>Weekly Challenge</Text>
@@ -44,6 +40,38 @@ export default function Index() {
 
         <TouchableOpacity style={styles.promoButton}>
           <Text style={styles.promoButtonText}>Play Now</Text>
+        </TouchableOpacity>
+      </View>
+
+      {/* Quick Quiz Card */}
+      <View style={styles.promoCard}>
+        <View style={styles.promoImage} />
+
+        <Text style={styles.promoTitle}>Quick Quiz</Text>
+        <Text style={styles.promoSubtitle}>Test your understanding</Text>
+
+        <Text style={styles.promoBody}>
+          Answer 5 short questions based on today’s vocabulary and track your improvement.
+        </Text>
+
+        <TouchableOpacity style={styles.promoButton}>
+          <Text style={styles.promoButtonText}>Begin Quiz</Text>
+        </TouchableOpacity>
+      </View>
+
+      {/* Word Discovery Card */}
+      <View style={styles.promoCard}>
+        <View style={styles.promoImage} />
+
+        <Text style={styles.promoTitle}>Word Discovery</Text>
+        <Text style={styles.promoSubtitle}>Explore new Tagalog terms</Text>
+
+        <Text style={styles.promoBody}>
+          Dive into definitions, examples, and usage notes to expand your understanding.
+        </Text>
+
+        <TouchableOpacity style={styles.promoButton}>
+          <Text style={styles.promoButtonText}>Explore</Text>
         </TouchableOpacity>
       </View>
 
@@ -61,7 +89,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
-    color: '#0038A8', // deep blue accent
+    color: '#0038A8',
   },
   search: {
     backgroundColor: '#FFFFFF',

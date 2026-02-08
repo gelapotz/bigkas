@@ -1,7 +1,10 @@
+import React, { useState } from 'react';
 import { ScrollView, Text, StyleSheet, TextInput, View, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function Index() {
+  const [revealed, setRevealed] = useState(false);
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Bigkas</Text>
@@ -13,17 +16,30 @@ export default function Index() {
       />
 
       {/* Word of the Day Card */}
-      <View style={styles.card}>
-        <Text style={styles.cardWord}>Kumusta</Text>
-        <Text style={styles.cardPhrase}>"Kumusta ka na?"</Text>
+      <TouchableOpacity onPress={() => setRevealed(!revealed)}>
+        <View style={styles.card}>
+          <View style={styles.cardInner}>
+            {revealed ? (
+              <>
+                <Text style={styles.cardWord}>Kumusta</Text>
+                <Text style={styles.cardPhrase}>Definition: to greet, to ask how someone is</Text>
+                <Text style={styles.cardReveal}>Tap to hide</Text>
+              </>
+            ) : (
+              <>
+                <Text style={styles.cardWord}>Kumusta</Text>
+                <Text style={styles.cardPhrase}>"Kumusta ka na?"</Text>
+                <Text style={styles.cardReveal}>Tap to reveal</Text>
 
-        <Text style={styles.cardReveal}>Tap to reveal</Text>
-
-        <View style={styles.iconRow}>
-          <Ionicons name="bookmark-outline" size={24} color="#4A6CFF" />
-          <Ionicons name="volume-high-outline" size={24} color="#4A6CFF" />
+                <View style={styles.iconRow}>
+                  <Ionicons name="bookmark-outline" size={24} color="#4A6CFF" />
+                  <Ionicons name="volume-high-outline" size={24} color="#4A6CFF" />
+                </View>
+              </>
+            )}
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
 
       <Text style={styles.cardDate}>Word of the Day — February 9, 2026</Text>
 
@@ -111,6 +127,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#EEE',
   },
+
+  /* Keeps card height consistent */
+  cardInner: {
+    minHeight: 150,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   cardWord: {
     fontSize: 28,
     fontWeight: '700',
@@ -150,7 +174,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  /* Image Placeholder */
   promoImage: {
     width: '100%',
     height: 100,

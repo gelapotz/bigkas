@@ -1,98 +1,116 @@
 import React, { useState } from 'react';
-import { ScrollView, Text, StyleSheet, TextInput, View, TouchableOpacity } from 'react-native';
+import { ScrollView, Text, StyleSheet, TextInput, View, TouchableOpacity, Switch } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function Index() {
   const [revealed, setRevealed] = useState(false);
+  const [trialEnabled, setTrialEnabled] = useState(false);
 
   return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.title}>Bigkas</Text>
+    <View style={{ flex: 1 }}>
+      <ScrollView style={styles.container}>
+        <Text style={styles.title}>Bigkas</Text>
 
-      <TextInput
-        style={styles.search}
-        placeholder="Search words"
-        placeholderTextColor="#777"
-      />
+        <TextInput
+          style={styles.search}
+          placeholder="Search words"
+          placeholderTextColor="#777"
+        />
 
-      {/* Word of the Day Card */}
-      <TouchableOpacity onPress={() => setRevealed(!revealed)}>
-        <View style={styles.card}>
-          <View style={styles.cardInner}>
-            {revealed ? (
-              <>
-                <Text style={styles.cardWord}>Kumusta</Text>
-                <Text style={styles.cardPhrase}>Definition: to greet, to ask how someone is</Text>
-                <Text style={styles.cardReveal}>Tap to hide</Text>
-              </>
-            ) : (
-              <>
-                <Text style={styles.cardWord}>Kumusta</Text>
-                <Text style={styles.cardPhrase}>"Kumusta ka na?"</Text>
-                <Text style={styles.cardReveal}>Tap to reveal</Text>
+        {/* Word of the Day Card */}
+        <TouchableOpacity onPress={() => setRevealed(!revealed)}>
+          <View style={styles.card}>
+            <View style={styles.cardInner}>
+              {revealed ? (
+                <>
+                  <Text style={styles.cardWord}>Kumusta</Text>
+                  <Text style={styles.cardPhrase}>Definition: to greet, to ask how someone is</Text>
+                  <Text style={styles.cardReveal}>Tap to hide</Text>
+                </>
+              ) : (
+                <>
+                  <Text style={styles.cardWord}>Kumusta</Text>
+                  <Text style={styles.cardPhrase}>"Kumusta ka na?"</Text>
+                  <Text style={styles.cardReveal}>Tap to reveal</Text>
 
-                <View style={styles.iconRow}>
-                  <Ionicons name="bookmark-outline" size={24} color="#4A6CFF" />
-                  <Ionicons name="volume-high-outline" size={24} color="#4A6CFF" />
-                </View>
-              </>
-            )}
+                  <View style={styles.iconRow}>
+                    <Ionicons name="bookmark-outline" size={24} color="#4A6CFF" />
+                    <Ionicons name="volume-high-outline" size={24} color="#4A6CFF" />
+                  </View>
+                </>
+              )}
+            </View>
           </View>
+        </TouchableOpacity>
+
+        <Text style={styles.cardDate}>Word of the Day — February 9, 2026</Text>
+
+        {/* Weekly Challenge Card */}
+        <View style={styles.promoCard}>
+          <View style={styles.promoImage} />
+
+          <Text style={styles.promoTitle}>Weekly Challenge</Text>
+          <Text style={styles.promoSubtitle}>Improve your Tagalog in 5 minutes</Text>
+
+          <Text style={styles.promoBody}>
+            Complete this week’s set of interactive exercises and earn a progress badge! ⭐
+          </Text>
+
+          <TouchableOpacity style={styles.promoButton}>
+            <Text style={styles.promoButtonText}>Play Now</Text>
+          </TouchableOpacity>
         </View>
-      </TouchableOpacity>
 
-      <Text style={styles.cardDate}>Word of the Day — February 9, 2026</Text>
+        {/* Quick Quiz Card */}
+        <View style={styles.promoCard}>
+          <View style={styles.promoImage} />
 
-      {/* Weekly Challenge Card */}
-      <View style={styles.promoCard}>
-        <View style={styles.promoImage} />
+          <Text style={styles.promoTitle}>Quick Quiz</Text>
+          <Text style={styles.promoSubtitle}>Test your understanding</Text>
 
-        <Text style={styles.promoTitle}>Weekly Challenge</Text>
-        <Text style={styles.promoSubtitle}>Improve your Tagalog in 5 minutes</Text>
+          <Text style={styles.promoBody}>
+            Answer 5 short questions based on today’s vocabulary and track your improvement.
+          </Text>
 
-        <Text style={styles.promoBody}>
-          Complete this week’s set of interactive exercises and earn a progress badge! ⭐
-        </Text>
+          <TouchableOpacity style={styles.promoButton}>
+            <Text style={styles.promoButtonText}>Begin Quiz</Text>
+          </TouchableOpacity>
+        </View>
 
-        <TouchableOpacity style={styles.promoButton}>
-          <Text style={styles.promoButtonText}>Play Now</Text>
-        </TouchableOpacity>
+        {/* Word Discovery Card */}
+        <View style={styles.promoCard}>
+          <View style={styles.promoImage} />
+
+          <Text style={styles.promoTitle}>Word Discovery</Text>
+          <Text style={styles.promoSubtitle}>Explore new Tagalog terms</Text>
+
+          <Text style={styles.promoBody}>
+            Dive into definitions, examples, and usage notes to expand your understanding.
+          </Text>
+
+          <TouchableOpacity style={styles.promoButton}>
+            <Text style={styles.promoButtonText}>Explore</Text>
+          </TouchableOpacity>
+        </View>
+
+        <Text>Hello</Text>
+      </ScrollView>
+
+      {/* FIXED TRIAL TOGGLE COMPONENT */}
+      <View style={styles.trialContainer}>
+        <View>
+          <Text style={styles.trialTitle}>Activate 7-day free trial</Text>
+          <Text style={styles.trialSubtitle}>Talk to Bigkas and get instant AI corrections</Text>
+        </View>
+
+        <Switch
+          value={trialEnabled}
+          onValueChange={setTrialEnabled}
+          thumbColor={trialEnabled ? '#4A6CFF' : '#FFF'}
+          trackColor={{ false: '#CCC', true: '#BFD0FF' }}
+        />
       </View>
-
-      {/* Quick Quiz Card */}
-      <View style={styles.promoCard}>
-        <View style={styles.promoImage} />
-
-        <Text style={styles.promoTitle}>Quick Quiz</Text>
-        <Text style={styles.promoSubtitle}>Test your understanding</Text>
-
-        <Text style={styles.promoBody}>
-          Answer 5 short questions based on today’s vocabulary and track your improvement.
-        </Text>
-
-        <TouchableOpacity style={styles.promoButton}>
-          <Text style={styles.promoButtonText}>Begin Quiz</Text>
-        </TouchableOpacity>
-      </View>
-
-      {/* Word Discovery Card */}
-      <View style={styles.promoCard}>
-        <View style={styles.promoImage} />
-
-        <Text style={styles.promoTitle}>Word Discovery</Text>
-        <Text style={styles.promoSubtitle}>Explore new Tagalog terms</Text>
-
-        <Text style={styles.promoBody}>
-          Dive into definitions, examples, and usage notes to expand your understanding.
-        </Text>
-
-        <TouchableOpacity style={styles.promoButton}>
-          <Text style={styles.promoButtonText}>Explore</Text>
-        </TouchableOpacity>
-      </View>
-
-      <Text>Hello</Text>
-    </ScrollView>
+    </View>
   );
 }
 
@@ -127,14 +145,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#EEE',
   },
-
-  /* Keeps card height consistent */
   cardInner: {
     minHeight: 150,
     justifyContent: 'center',
     alignItems: 'center',
   },
-
   cardWord: {
     fontSize: 28,
     fontWeight: '700',
@@ -173,7 +188,6 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     marginBottom: 20,
   },
-
   promoImage: {
     width: '100%',
     height: 100,
@@ -181,7 +195,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     marginBottom: 16,
   },
-
   promoTitle: {
     fontSize: 20,
     fontWeight: '700',
@@ -210,5 +223,25 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontWeight: '600',
     fontSize: 14,
+  },
+
+  /* Fixed Trial Component */
+  trialContainer: {
+    backgroundColor: '#E8D8FF',
+    padding: 16,
+    borderTopWidth: 1,
+    borderColor: '#D3B8FF',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  trialTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#0038A8',
+  },
+  trialSubtitle: {
+    fontSize: 14,
+    color: '#444',
   },
 });

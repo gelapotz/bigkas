@@ -1,20 +1,27 @@
-import { ScrollView, Text, StyleSheet, View } from 'react-native';
+import { ScrollView, Text, StyleSheet, View, TextInput } from 'react-native';
 
 const KitchenSink = () => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Kitchen Sink</Text>
 
+      {/* Search Bar Preview */}
       <View style={styles.box}>
-        <Text>Search Bar</Text>
+        <Text style={styles.label}>Search Bar</Text>
+        <TextInput
+          style={styles.search}
+          placeholder="Search words"
+        />
       </View>
 
+      {/* Card Preview */}
       <View style={styles.box}>
         <Text>Card</Text>
       </View>
 
+      {/* Buttons, Toggles, etc. */}
       <View style={styles.box}>
-        <Text>Buttons, Toggles, etc.</Text>
+        <Text>Buttons, toggles, etc.</Text>
       </View>
     </ScrollView>
   );
@@ -37,5 +44,15 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 12,
     marginBottom: 20,
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 8,
+  },
+  search: {
+    backgroundColor: '#f5ffed',
+    padding: 12,
+    borderRadius: 8,
   },
 });

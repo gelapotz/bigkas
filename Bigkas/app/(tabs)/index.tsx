@@ -14,6 +14,9 @@ export default function Index() {
       <View style={styles.card}>
         <Text style={styles.cardWord}>Kumusta</Text>
         <Text style={styles.cardPhrase}>"Kumusta ka na?"</Text>
+
+        <Text style={styles.cardReveal}>Tap to reveal</Text>
+        <Text style={styles.cardDate}>Word of the Day — February 9, 2026</Text>
       </View>
 
       <Text>Hello</Text>
@@ -51,5 +54,15 @@ const styles = StyleSheet.create({
   cardPhrase: {
     fontSize: 16,
     color: '#444444',
+    marginBottom: 16,
+  },
+  cardReveal: {
+    fontSize: 14,
+    color: '#777777',
+    marginBottom: 12,
+  },
+  cardDate: {
+    fontSize: 12,
+    color: '#999999',
   },
 });

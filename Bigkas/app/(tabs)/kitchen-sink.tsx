@@ -20,37 +20,37 @@ const KitchenSink = () => {
       <View style={styles.box}>
         <Text style={styles.label}>Word of the Day Card</Text>
 
-        <View style={styles.card}>
-          <Text style={styles.cardWord}>Kumusta</Text>
-          <Text style={styles.cardPhrase}>"Kumusta ka na?"</Text>
+        <View style={styles.wotdCard}>
+          <Text style={styles.wotdWord}>Kumusta</Text>
+          <Text style={styles.wotdPhrase}>"Kumusta ka na?"</Text>
 
-          <Text style={styles.cardReveal}>Tap to reveal</Text>
+          <Text style={styles.wotdReveal}>Tap to reveal</Text>
 
-          <View style={styles.iconRow}>
+          <View style={styles.wotdIconRow}>
             <Ionicons name="bookmark-outline" size={24} color="#4A6CFF" />
             <Ionicons name="volume-high-outline" size={24} color="#4A6CFF" />
           </View>
         </View>
 
-        <Text style={styles.cardDate}>Word of the Day — February 9, 2026</Text>
+        <Text style={styles.wotdDate}>Word of the Day — February 9, 2026</Text>
       </View>
 
-      {/* Promo Card Preview */}
+      {/* Reusable Promo Card Preview */}
       <View style={styles.box}>
         <Text style={styles.label}>Promo Card</Text>
 
-        <View style={styles.promoCard}>
-          <View style={styles.promoImage} />
+        <View style={styles.card}>
+          <View style={styles.cardImage} />
 
-          <Text style={styles.promoTitle}>Weekly Challenge</Text>
-          <Text style={styles.promoSubtitle}>Improve your Tagalog in 5 minutes</Text>
+          <Text style={styles.cardHeading}>Heading</Text>
+          <Text style={styles.cardSubheading}>Subheading</Text>
 
-          <Text style={styles.promoBody}>
-            Complete this week’s set of interactive exercises and earn a progress badge! ⭐
+          <Text style={styles.cardDescription}>
+            Short description. Another sentence, just because.
           </Text>
 
-          <TouchableOpacity style={styles.promoButton}>
-            <Text style={styles.promoButtonText}>Play Now</Text>
+          <TouchableOpacity style={styles.cardButton}>
+            <Text style={styles.cardButtonText}>Button</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -102,84 +102,83 @@ const styles = StyleSheet.create({
   },
 
   /* Word of the Day Card */
-  card: {
+  wotdCard: {
     backgroundColor: '#FFFFFF',
     padding: 20,
     borderRadius: 16,
-    marginBottom: 8,
     alignItems: 'center',
     borderWidth: 1,
     borderColor: '#EEE',
   },
-  cardWord: {
+  wotdWord: {
     fontSize: 28,
     fontWeight: '700',
     marginBottom: 8,
-    textAlign: 'center',
     color: '#0038A8',
+    textAlign: 'center',
   },
-  cardPhrase: {
+  wotdPhrase: {
     fontSize: 16,
     color: '#444',
     marginBottom: 16,
     textAlign: 'center',
   },
-  cardReveal: {
+  wotdReveal: {
     fontSize: 14,
     color: '#777',
     marginBottom: 16,
     textAlign: 'center',
   },
-  iconRow: {
+  wotdIconRow: {
     flexDirection: 'row',
     justifyContent: 'center',
     gap: 16,
   },
-  cardDate: {
+  wotdDate: {
     fontSize: 12,
     color: '#777',
     textAlign: 'center',
     marginTop: 8,
   },
 
-  /* Promo Card */
-  promoCard: {
+  /* Reusable Promo Card */
+  card: {
     backgroundColor: '#E8D8FF',
     padding: 20,
     borderRadius: 16,
   },
-  promoImage: {
+  cardImage: {
     width: '100%',
     height: 100,
     backgroundColor: '#D3B8FF',
     borderRadius: 12,
     marginBottom: 16,
   },
-  promoTitle: {
+  cardHeading: {
     fontSize: 20,
     fontWeight: '700',
     marginBottom: 6,
     color: '#0038A8',
   },
-  promoSubtitle: {
+  cardSubheading: {
     fontSize: 16,
     fontWeight: '500',
     marginBottom: 12,
     color: '#444',
   },
-  promoBody: {
+  cardDescription: {
     fontSize: 14,
     color: '#444',
     marginBottom: 16,
   },
-  promoButton: {
+  cardButton: {
     backgroundColor: '#4A6CFF',
     paddingVertical: 10,
     paddingHorizontal: 16,
     borderRadius: 10,
     alignSelf: 'flex-start',
   },
-  promoButtonText: {
+  cardButtonText: {
     color: '#FFFFFF',
     fontWeight: '600',
     fontSize: 14,

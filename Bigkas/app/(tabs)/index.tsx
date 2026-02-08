@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, Text, StyleSheet, TextInput, View, TouchableOpacity, Switch } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 export default function Index() {
   const [revealed, setRevealed] = useState(false);
@@ -56,9 +57,10 @@ export default function Index() {
             Complete this week’s set of interactive exercises and earn a progress badge! ⭐
           </Text>
 
-          <TouchableOpacity style={styles.promoButton}>
-            <Text style={styles.promoButtonText}>Play Now</Text>
-          </TouchableOpacity>
+          <TouchableOpacity style={styles.promoButton} onPress={() => router.push('/placeholder')}>
+  <Text style={styles.promoButtonText}>Play Now</Text>
+</TouchableOpacity>
+
         </View>
 
         {/* Quick Quiz Card */}
@@ -72,9 +74,10 @@ export default function Index() {
             Answer 5 short questions based on today’s vocabulary and track your improvement.
           </Text>
 
-          <TouchableOpacity style={styles.promoButton}>
-            <Text style={styles.promoButtonText}>Begin Quiz</Text>
-          </TouchableOpacity>
+          <TouchableOpacity style={styles.promoButton} onPress={() => router.push('/placeholder')}>
+  <Text style={styles.promoButtonText}>Begin Quiz</Text>
+</TouchableOpacity>
+
         </View>
 
         {/* Word Discovery Card */}
@@ -88,9 +91,10 @@ export default function Index() {
             Dive into definitions, examples, and usage notes to expand your understanding.
           </Text>
 
-          <TouchableOpacity style={styles.promoButton}>
-            <Text style={styles.promoButtonText}>Explore</Text>
-          </TouchableOpacity>
+          <TouchableOpacity style={styles.promoButton} onPress={() => router.push('/placeholder')}>
+  <Text style={styles.promoButtonText}>Explore</Text>
+</TouchableOpacity>
+
         </View>
 
         <Text>Hello</Text>

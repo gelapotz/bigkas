@@ -1,15 +1,16 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { ScrollView, Text, StyleSheet } from 'react-native';
 
 export default function Index() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text>Hello</Text>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    backgroundColor: '#ceffaa',
   },
 });

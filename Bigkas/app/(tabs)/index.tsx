@@ -10,7 +10,13 @@ export default function Index() {
   return (
     <View style={{ flex: 1 }}>
       <ScrollView style={styles.container}>
-        <Text style={styles.title}>Bigkas</Text>
+
+        {/* App Bar */}
+        <View style={styles.appBar}>
+          <Ionicons name="menu" size={28} color="#0038A8" />
+          <Text style={styles.appBarTitle}>Bigkas</Text>
+          <Ionicons name="person-circle-outline" size={28} color="#0038A8" />
+        </View>
 
         {/* Updated search bar, with trailing icon */}
         <View style={styles.searchBar}>
@@ -124,10 +130,19 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#F9F9F9',
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
+
+  /* App Bar */
+  appBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingTop: 16,
+    paddingBottom: 12,
     marginBottom: 16,
+  },
+  appBarTitle: {
+    fontSize: 22,
+    fontWeight: '700',
     color: '#0038A8',
   },
 

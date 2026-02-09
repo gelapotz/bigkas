@@ -1,6 +1,6 @@
 # Bigkas
 
-Bigkas is a simple Tagalog learning app made for **COMP 265**. It helps beginners learn Tagalog words through a clean, friendly mobile layout inspired by dictionary apps like Merriam‑Webster. The colors are based on the **Philippine flag** (excluding red), giving the app a cultural and modern feel.
+Bigkas (which means "speak") is a simple Tagalog learning app made for **COMP 265**. It helps beginners learn Tagalog words through a clean, friendly mobile layout inspired by dictionary apps like Merriam‑Webster. The colors are based on the **Philippine flag** (excluding red), giving the app a cultural and modern feel.
 
 ---
 

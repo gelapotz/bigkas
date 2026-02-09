@@ -60,6 +60,21 @@ export default function Index() {
 
         <Text style={styles.heroDate}>Word of the Day — February 9, 2026</Text>
 
+        {/* Explore More */}
+        <View style={styles.exploreContainer}>
+          <Text style={styles.exploreTitle}>Explore more vocabulary</Text>
+          <Text style={styles.exploreSubtitle}>
+            Study new words with flashcards and grow your Tagalog mastery.
+          </Text>
+
+          <TouchableOpacity
+            style={styles.exploreButton}
+            onPress={() => router.push('/placeholder')}
+          >
+            <Text style={styles.exploreButtonText}>Browse Decks</Text>
+          </TouchableOpacity>
+        </View>
+
         {/* Weekly Challenge */}
         <View style={styles.promoCardLightBlue}>
           <View style={styles.promoImageLightBlue} />
@@ -228,6 +243,41 @@ const styles = StyleSheet.create({
     color: '#777',
     textAlign: 'center',
     marginBottom: 28,
+  },
+
+  /* Explore More (Dark Card + Yellow CTA) */
+  exploreContainer: {
+    backgroundColor: '#0038A8',
+    padding: 24,
+    borderRadius: 20,
+    marginBottom: 28,
+    alignItems: 'center',
+  },
+  exploreTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#FFFFFF',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  exploreSubtitle: {
+    fontSize: 14,
+    color: '#E6ECFF',
+    textAlign: 'center',
+    lineHeight: 20,
+    marginBottom: 20,
+    maxWidth: 260,
+  },
+  exploreButton: {
+    backgroundColor: '#FCD116',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+  },
+  exploreButtonText: {
+    color: '#0038A8',
+    fontWeight: '700',
+    fontSize: 14,
   },
 
   /* PROMO CARDS */

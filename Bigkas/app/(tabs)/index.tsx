@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, Text, StyleSheet, TextInput, View, TouchableOpacity, Switch } from 'react-native';
+import { ScrollView, Text, StyleSheet, TextInput, View, TouchableOpacity, Switch, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 
@@ -77,7 +77,11 @@ export default function Index() {
 
         {/* Weekly Challenge */}
         <View style={styles.promoCardLightBlue}>
-          <View style={styles.promoImageLightBlue} />
+          <Image
+            source={require('../../assets/images/weekly.jpg')}
+            style={styles.promoImage}
+            resizeMode="cover"
+          />
 
           <View style={styles.promoContent}>
             <Text style={styles.promoTitleBlue}>Weekly Challenge</Text>
@@ -95,7 +99,11 @@ export default function Index() {
 
         {/* Quick Quiz */}
         <View style={styles.promoCardLightBlue}>
-          <View style={styles.promoImageLightBlue} />
+          <Image
+            source={require('../../assets/images/quiz.jpg')}
+            style={styles.promoImage}
+            resizeMode="cover"
+          />
 
           <View style={styles.promoContent}>
             <Text style={styles.promoTitleBlue}>Quick Quiz</Text>
@@ -113,7 +121,11 @@ export default function Index() {
 
         {/* Word Discovery */}
         <View style={styles.promoCardLightBlue}>
-          <View style={styles.promoImageLightBlue} />
+          <Image
+            source={require('../../assets/images/discovery.jpg')}
+            style={styles.promoImage}
+            resizeMode="cover"
+          />
 
           <View style={styles.promoContent}>
             <Text style={styles.promoTitleBlue}>Word Discovery</Text>
@@ -287,10 +299,11 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     marginBottom: 28,
   },
-  promoImageLightBlue: {
+
+  /* NEW IMAGE STYLE */
+  promoImage: {
     width: '100%',
     height: 120,
-    backgroundColor: '#C7D8FF',
   },
 
   /* Promo Content */

@@ -29,10 +29,11 @@ export default function Index() {
           <Ionicons name="search" size={20} color="#0038A8" />
         </View>
 
-        {/* Word of the Day — Hero Card */}
+        {/* Word of the Day */}
         <TouchableOpacity onPress={() => setRevealed(!revealed)}>
           <View style={styles.heroCard}>
             <View style={styles.heroInner}>
+
               {revealed ? (
                 <>
                   <Text style={styles.heroWord}>Kumusta</Text>
@@ -44,13 +45,15 @@ export default function Index() {
                   <Text style={styles.heroWord}>Kumusta</Text>
                   <Text style={styles.heroExample}>"Kumusta ka na?"</Text>
                   <Text style={styles.heroHint}>Tap to reveal</Text>
-
-                  <View style={styles.heroIcons}>
-                    <Ionicons name="bookmark-outline" size={24} color="#FCD116" />
-                    <Ionicons name="volume-high-outline" size={24} color="#FCD116" />
-                  </View>
                 </>
               )}
+
+              {/* Icons always visible */}
+              <View style={styles.heroIcons}>
+                <Ionicons name="bookmark-outline" size={24} color="#FCD116" />
+                <Ionicons name="volume-high-outline" size={24} color="#FCD116" />
+              </View>
+
             </View>
           </View>
         </TouchableOpacity>
@@ -218,6 +221,7 @@ const styles = StyleSheet.create({
   heroIcons: {
     flexDirection: 'row',
     gap: 20,
+    marginTop: 8,
   },
   heroDate: {
     fontSize: 12,

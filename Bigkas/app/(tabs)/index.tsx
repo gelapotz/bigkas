@@ -9,14 +9,15 @@ export default function Index() {
 
   return (
     <View style={{ flex: 1 }}>
-      <ScrollView style={styles.container}>
 
-        {/* App Bar */}
-        <View style={styles.appBar}>
-          <Ionicons name="menu" size={28} color="#0038A8" />
-          <Text style={styles.appBarTitle}>Bigkas</Text>
-          <Ionicons name="person-circle-outline" size={28} color="#0038A8" />
-        </View>
+      {/* Sticky App Bar */}
+      <View style={styles.appBar}>
+        <Ionicons name="menu" size={28} color="#0038A8" />
+        <Text style={styles.appBarTitle}>Bigkas</Text>
+        <Ionicons name="person-circle-outline" size={28} color="#0038A8" />
+      </View>
+
+      <ScrollView style={styles.container}>
 
         {/* Updated search bar, with trailing icon */}
         <View style={styles.searchBar}>
@@ -128,17 +129,24 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    paddingTop: 20, // a little more space above search bar
     backgroundColor: '#F9F9F9',
   },
 
-  /* App Bar */
+  /* Sticky App Bar */
   appBar: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: 16,
-    paddingBottom: 12,
-    marginBottom: 16,
+    paddingTop: 40,     // more space above app bar
+    paddingBottom: 24,  // MORE space below the title/icons (inside the bar)
+    paddingHorizontal: 20,
+    backgroundColor: '#F9F9F9',
+    zIndex: 10,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
   },
   appBarTitle: {
     fontSize: 22,
@@ -156,7 +164,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 1,
     borderColor: '#E0E0E0',
-    marginBottom: 20,
+    marginBottom: 24,
   },
   searchInput: {
     flex: 1,
@@ -170,7 +178,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     padding: 20,
     borderRadius: 16,
-    marginBottom: 8,
+    marginBottom: 16,
     alignItems: 'center',
     borderWidth: 1,
     borderColor: '#EEE',
@@ -208,7 +216,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#777',
     textAlign: 'center',
-    marginBottom: 20,
+    marginBottom: 24,
   },
 
   /* Promo Card */
@@ -216,7 +224,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#E8D8FF',
     padding: 20,
     borderRadius: 16,
-    marginBottom: 20,
+    marginBottom: 24,
   },
   promoImage: {
     width: '100%',

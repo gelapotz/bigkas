@@ -12,11 +12,15 @@ export default function Index() {
       <ScrollView style={styles.container}>
         <Text style={styles.title}>Bigkas</Text>
 
-        <TextInput
-          style={styles.search}
-          placeholder="Search words"
-          placeholderTextColor="#777"
-        />
+        {/* Updated search bar, with trailing icon */}
+        <View style={styles.searchBar}>
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search words"
+            placeholderTextColor="#777"
+          />
+          <Ionicons name="search" size={20} color="#777" />
+        </View>
 
         {/* Word of the Day Card */}
         <TouchableOpacity onPress={() => setRevealed(!revealed)}>
@@ -58,9 +62,8 @@ export default function Index() {
           </Text>
 
           <TouchableOpacity style={styles.promoButton} onPress={() => router.push('/placeholder')}>
-  <Text style={styles.promoButtonText}>Play Now</Text>
-</TouchableOpacity>
-
+            <Text style={styles.promoButtonText}>Play Now</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Quick Quiz Card */}
@@ -75,9 +78,8 @@ export default function Index() {
           </Text>
 
           <TouchableOpacity style={styles.promoButton} onPress={() => router.push('/placeholder')}>
-  <Text style={styles.promoButtonText}>Begin Quiz</Text>
-</TouchableOpacity>
-
+            <Text style={styles.promoButtonText}>Begin Quiz</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Word Discovery Card */}
@@ -92,15 +94,14 @@ export default function Index() {
           </Text>
 
           <TouchableOpacity style={styles.promoButton} onPress={() => router.push('/placeholder')}>
-  <Text style={styles.promoButtonText}>Explore</Text>
-</TouchableOpacity>
-
+            <Text style={styles.promoButtonText}>Explore</Text>
+          </TouchableOpacity>
         </View>
 
         <Text>Hello</Text>
       </ScrollView>
 
-      {/* FIXED TRIAL TOGGLE COMPONENT */}
+      {/* Fixed Trial Component */}
       <View style={styles.trialContainer}>
         <View>
           <Text style={styles.trialTitle}>Activate 7-day free trial</Text>
@@ -129,14 +130,24 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     color: '#0038A8',
   },
-  search: {
+
+  /* Updated search bar, with trailing icon */
+  searchBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#FFFFFF',
-    padding: 12,
-    borderRadius: 8,
-    marginBottom: 20,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderRadius: 12,
     borderWidth: 1,
     borderColor: '#E0E0E0',
+    marginBottom: 20,
+  },
+  searchInput: {
+    flex: 1,
+    fontSize: 16,
     color: '#444',
+    marginRight: 8,
   },
 
   /* Word of the Day Card */

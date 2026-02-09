@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 const KitchenSink = () => {
   return (
     <ScrollView style={styles.container}>
+
       <Text style={styles.title}>Kitchen Sink</Text>
 
       {/* Search Bar Preview */}
@@ -87,6 +88,7 @@ const KitchenSink = () => {
           />
         </View>
       </View>
+
     </ScrollView>
   );
 };
@@ -98,12 +100,15 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#F9F9F9',
   },
+
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
+    marginTop: 20,   // FIXED SPACING
     color: '#0038A8',
   },
+
   box: {
     backgroundColor: '#ffffff',
     padding: 16,

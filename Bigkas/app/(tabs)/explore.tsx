@@ -7,6 +7,6 @@ export default function Explore() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#EEF4FF', // matches your app background
+    backgroundColor: '#EEF4FF', 
   },
 });

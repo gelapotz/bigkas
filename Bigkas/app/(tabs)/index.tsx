@@ -300,10 +300,10 @@ const styles = StyleSheet.create({
     marginBottom: 28,
   },
 
-  /* NEW IMAGE STYLE */
+  /* TALLER IMAGE */
   promoImage: {
     width: '100%',
-    height: 120,
+    height: 180,   // ← increased height
   },
 
   /* Promo Content */

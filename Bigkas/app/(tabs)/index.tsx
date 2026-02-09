@@ -10,44 +10,44 @@ export default function Index() {
   return (
     <View style={{ flex: 1 }}>
 
-      {/* Sticky App Bar */}
+      {/* App Bar */}
       <View style={styles.appBar}>
-        <Ionicons name="menu" size={28} color="#0038A8" />
+        <Ionicons name="menu" size={28} color="#FFFFFF" />
         <Text style={styles.appBarTitle}>Bigkas</Text>
-        <Ionicons name="person-circle-outline" size={28} color="#0038A8" />
+        <Ionicons name="person-circle-outline" size={28} color="#FFFFFF" />
       </View>
 
       <ScrollView style={styles.container}>
 
-        {/* Updated search bar, with trailing icon */}
+        {/* Search Bar */}
         <View style={styles.searchBar}>
           <TextInput
             style={styles.searchInput}
             placeholder="Search words"
             placeholderTextColor="#777"
           />
-          <Ionicons name="search" size={20} color="#777" />
+          <Ionicons name="search" size={20} color="#0038A8" />
         </View>
 
-        {/* Word of the Day Card */}
+        {/* Word of the Day — Hero Card */}
         <TouchableOpacity onPress={() => setRevealed(!revealed)}>
-          <View style={styles.card}>
-            <View style={styles.cardInner}>
+          <View style={styles.heroCard}>
+            <View style={styles.heroInner}>
               {revealed ? (
                 <>
-                  <Text style={styles.cardWord}>Kumusta</Text>
-                  <Text style={styles.cardPhrase}>Definition: to greet, to ask how someone is</Text>
-                  <Text style={styles.cardReveal}>Tap to hide</Text>
+                  <Text style={styles.heroWord}>Kumusta</Text>
+                  <Text style={styles.heroDefinition}>Definition: to greet, to ask how someone is</Text>
+                  <Text style={styles.heroHint}>Tap to hide</Text>
                 </>
               ) : (
                 <>
-                  <Text style={styles.cardWord}>Kumusta</Text>
-                  <Text style={styles.cardPhrase}>"Kumusta ka na?"</Text>
-                  <Text style={styles.cardReveal}>Tap to reveal</Text>
+                  <Text style={styles.heroWord}>Kumusta</Text>
+                  <Text style={styles.heroExample}>"Kumusta ka na?"</Text>
+                  <Text style={styles.heroHint}>Tap to reveal</Text>
 
-                  <View style={styles.iconRow}>
-                    <Ionicons name="bookmark-outline" size={24} color="#4A6CFF" />
-                    <Ionicons name="volume-high-outline" size={24} color="#4A6CFF" />
+                  <View style={styles.heroIcons}>
+                    <Ionicons name="bookmark-outline" size={24} color="#FCD116" />
+                    <Ionicons name="volume-high-outline" size={24} color="#FCD116" />
                   </View>
                 </>
               )}
@@ -55,60 +55,65 @@ export default function Index() {
           </View>
         </TouchableOpacity>
 
-        <Text style={styles.cardDate}>Word of the Day — February 9, 2026</Text>
+        <Text style={styles.heroDate}>Word of the Day — February 9, 2026</Text>
 
-        {/* Weekly Challenge Card */}
-        <View style={styles.promoCard}>
-          <View style={styles.promoImage} />
+        {/* Weekly Challenge */}
+        <View style={styles.promoCardLightBlue}>
+          <View style={styles.promoImageLightBlue} />
 
-          <Text style={styles.promoTitle}>Weekly Challenge</Text>
-          <Text style={styles.promoSubtitle}>Improve your Tagalog in 5 minutes</Text>
+          <View style={styles.promoContent}>
+            <Text style={styles.promoTitleBlue}>Weekly Challenge</Text>
+            <Text style={styles.promoSubtitleBlue}>Improve your Tagalog in 5 minutes</Text>
 
-          <Text style={styles.promoBody}>
-            Complete this week’s set of interactive exercises and earn a progress badge! ⭐
-          </Text>
+            <Text style={styles.promoBodyBlue}>
+              Complete this week’s set of interactive exercises and earn a progress badge! ⭐
+            </Text>
 
-          <TouchableOpacity style={styles.promoButton} onPress={() => router.push('/placeholder')}>
-            <Text style={styles.promoButtonText}>Play Now</Text>
-          </TouchableOpacity>
+            <TouchableOpacity style={styles.promoButtonBlue} onPress={() => router.push('/placeholder')}>
+              <Text style={styles.promoButtonTextWhite}>Play Now</Text>
+            </TouchableOpacity>
+          </View>
         </View>
 
-        {/* Quick Quiz Card */}
-        <View style={styles.promoCard}>
-          <View style={styles.promoImage} />
+        {/* Quick Quiz */}
+        <View style={styles.promoCardLightBlue}>
+          <View style={styles.promoImageLightBlue} />
 
-          <Text style={styles.promoTitle}>Quick Quiz</Text>
-          <Text style={styles.promoSubtitle}>Test your understanding</Text>
+          <View style={styles.promoContent}>
+            <Text style={styles.promoTitleBlue}>Quick Quiz</Text>
+            <Text style={styles.promoSubtitleBlue}>Test your understanding</Text>
 
-          <Text style={styles.promoBody}>
-            Answer 5 short questions based on today’s vocabulary and track your improvement.
-          </Text>
+            <Text style={styles.promoBodyBlue}>
+              Answer 5 short questions based on today’s vocabulary and track your improvement.
+            </Text>
 
-          <TouchableOpacity style={styles.promoButton} onPress={() => router.push('/placeholder')}>
-            <Text style={styles.promoButtonText}>Begin Quiz</Text>
-          </TouchableOpacity>
+            <TouchableOpacity style={styles.promoButtonBlue} onPress={() => router.push('/placeholder')}>
+              <Text style={styles.promoButtonTextWhite}>Begin Quiz</Text>
+            </TouchableOpacity>
+          </View>
         </View>
 
-        {/* Word Discovery Card */}
-        <View style={styles.promoCard}>
-          <View style={styles.promoImage} />
+        {/* Word Discovery */}
+        <View style={styles.promoCardLightBlue}>
+          <View style={styles.promoImageLightBlue} />
 
-          <Text style={styles.promoTitle}>Word Discovery</Text>
-          <Text style={styles.promoSubtitle}>Explore new Tagalog terms</Text>
+          <View style={styles.promoContent}>
+            <Text style={styles.promoTitleBlue}>Word Discovery</Text>
+            <Text style={styles.promoSubtitleBlue}>Explore new Tagalog terms</Text>
 
-          <Text style={styles.promoBody}>
-            Dive into definitions, examples, and usage notes to expand your understanding.
-          </Text>
+            <Text style={styles.promoBodyBlue}>
+              Dive into definitions, examples, and usage notes to expand your understanding.
+            </Text>
 
-          <TouchableOpacity style={styles.promoButton} onPress={() => router.push('/placeholder')}>
-            <Text style={styles.promoButtonText}>Explore</Text>
-          </TouchableOpacity>
+            <TouchableOpacity style={styles.promoButtonBlue} onPress={() => router.push('/placeholder')}>
+              <Text style={styles.promoButtonTextWhite}>Explore</Text>
+            </TouchableOpacity>
+          </View>
         </View>
 
-        <Text>Hello</Text>
       </ScrollView>
 
-      {/* Fixed Trial Component */}
+      {/* Trial Bar */}
       <View style={styles.trialContainer}>
         <View>
           <Text style={styles.trialTitle}>Activate 7-day free trial</Text>
@@ -118,8 +123,8 @@ export default function Index() {
         <Switch
           value={trialEnabled}
           onValueChange={setTrialEnabled}
-          thumbColor={trialEnabled ? '#4A6CFF' : '#FFF'}
-          trackColor={{ false: '#CCC', true: '#BFD0FF' }}
+          thumbColor={trialEnabled ? '#0038A8' : '#FFF'}
+          trackColor={{ false: '#CCC', true: '#C7D8FF' }}
         />
       </View>
     </View>
@@ -127,34 +132,32 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
+
+  /* Screen Container */
   container: {
     padding: 20,
-    paddingTop: 20, // a little more space above search bar
-    backgroundColor: '#F9F9F9',
+    paddingTop: 20,
+    backgroundColor: '#EEF4FF',
   },
 
-  /* Sticky App Bar */
+  /* App Bar */
   appBar: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: 40,     // more space above app bar
-    paddingBottom: 24,  // MORE space below the title/icons (inside the bar)
+    paddingTop: 40,
+    paddingBottom: 24,
     paddingHorizontal: 20,
-    backgroundColor: '#F9F9F9',
-    zIndex: 10,
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
+    backgroundColor: '#0A4CB8',
+    elevation: 4,
   },
   appBarTitle: {
     fontSize: 22,
     fontWeight: '700',
-    color: '#0038A8',
+    color: '#FFFFFF',
   },
 
-  /* Updated search bar, with trailing icon */
+  /* Search Bar */
   searchBar: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -163,112 +166,127 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#E0E0E0',
-    marginBottom: 24,
+    borderColor: '#E5EAF5',
+    marginBottom: 28,
   },
   searchInput: {
     flex: 1,
     fontSize: 16,
-    color: '#444',
+    color: '#555',
     marginRight: 8,
   },
 
-  /* Word of the Day Card */
-  card: {
+  /* Word of the Day */
+  heroCard: {
     backgroundColor: '#FFFFFF',
-    padding: 20,
-    borderRadius: 16,
-    marginBottom: 16,
-    alignItems: 'center',
+    padding: 24,
+    borderRadius: 20,
+    marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#EEE',
+    borderColor: '#E5EAF5',
+    elevation: 1,
   },
-  cardInner: {
+  heroInner: {
     minHeight: 150,
     justifyContent: 'center',
     alignItems: 'center',
+    gap: 8,
   },
-  cardWord: {
-    fontSize: 28,
+  heroWord: {
+    fontSize: 30,
     fontWeight: '700',
-    marginBottom: 8,
-    textAlign: 'center',
     color: '#0038A8',
-  },
-  cardPhrase: {
-    fontSize: 16,
-    color: '#444',
-    marginBottom: 16,
     textAlign: 'center',
   },
-  cardReveal: {
+  heroExample: {
+    fontSize: 16,
+    color: '#555',
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+  heroDefinition: {
+    fontSize: 16,
+    color: '#555',
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+  heroHint: {
     fontSize: 14,
     color: '#777',
-    marginBottom: 16,
-    textAlign: 'center',
+    marginBottom: 12,
   },
-  iconRow: {
+  heroIcons: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    gap: 16,
+    gap: 20,
   },
-  cardDate: {
+  heroDate: {
     fontSize: 12,
     color: '#777',
     textAlign: 'center',
-    marginBottom: 24,
+    marginBottom: 28,
   },
 
-  /* Promo Card */
-  promoCard: {
-    backgroundColor: '#E8D8FF',
-    padding: 20,
-    borderRadius: 16,
-    marginBottom: 24,
+  /* PROMO CARDS */
+  promoCardLightBlue: {
+    backgroundColor: '#DDE8FF',
+    borderRadius: 20,
+    overflow: 'hidden',
+    marginBottom: 28,
   },
-  promoImage: {
+  promoImageLightBlue: {
     width: '100%',
-    height: 100,
-    backgroundColor: '#D3B8FF',
-    borderRadius: 12,
-    marginBottom: 16,
+    height: 120,
+    backgroundColor: '#C7D8FF',
   },
-  promoTitle: {
+
+  /* Promo Content */
+  promoContent: {
+    padding: 20,
+    gap: 8,
+  },
+
+  /* Promo Text */
+  promoTitleBlue: {
     fontSize: 20,
     fontWeight: '700',
-    marginBottom: 6,
     color: '#0038A8',
   },
-  promoSubtitle: {
+  promoSubtitleBlue: {
     fontSize: 16,
     fontWeight: '500',
-    marginBottom: 12,
-    color: '#444',
+    color: '#0038A8',
+    opacity: 0.9,
   },
-  promoBody: {
+  promoBodyBlue: {
     fontSize: 14,
-    color: '#444',
-    marginBottom: 16,
+    color: '#0038A8',
+    opacity: 0.9,
+    marginBottom: 20,
+    lineHeight: 20,
   },
-  promoButton: {
-    backgroundColor: '#4A6CFF',
-    paddingVertical: 10,
+
+  /* Buttons */
+  promoButtonBlue: {
+    backgroundColor: '#0038A8',
+    paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 10,
-    alignSelf: 'flex-start',
+    minWidth: 150,
+    alignItems: 'center',
+    alignSelf: 'flex-end',
   },
-  promoButtonText: {
+  promoButtonTextWhite: {
     color: '#FFFFFF',
-    fontWeight: '600',
+    fontWeight: '700',
     fontSize: 14,
   },
 
-  /* Fixed Trial Component */
+  /* Trial Bar */
   trialContainer: {
-    backgroundColor: '#E8D8FF',
+    backgroundColor: '#E3EDFF',
     padding: 16,
     borderTopWidth: 1,
-    borderColor: '#D3B8FF',
+    borderColor: '#D0DFFF',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -280,6 +298,7 @@ const styles = StyleSheet.create({
   },
   trialSubtitle: {
     fontSize: 14,
-    color: '#444',
+    color: '#0038A8',
+    opacity: 0.8,
   },
 });

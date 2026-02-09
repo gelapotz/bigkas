@@ -7,7 +7,6 @@ const KitchenSink = () => {
 
       <Text style={styles.title}>Kitchen Sink</Text>
 
-      {/* Search Bar Preview */}
       <View style={styles.box}>
         <Text style={styles.label}>Search Bar</Text>
 
@@ -21,7 +20,6 @@ const KitchenSink = () => {
         </View>
       </View>
 
-      {/* Word of the Day Card (Front) */}
       <View style={styles.box}>
         <Text style={styles.label}>Word of the Day Card (Front)</Text>
 
@@ -39,7 +37,6 @@ const KitchenSink = () => {
         <Text style={styles.wotdDate}>Word of the Day — February 9, 2026</Text>
       </View>
 
-      {/* Word of the Day Card (Revealed) */}
       <View style={styles.box}>
         <Text style={styles.label}>Word of the Day Card (Revealed)</Text>
 
@@ -50,7 +47,6 @@ const KitchenSink = () => {
         </View>
       </View>
 
-      {/* Reusable Promo Card Preview */}
       <View style={styles.box}>
         <Text style={styles.label}>Promo Card</Text>
 
@@ -70,7 +66,6 @@ const KitchenSink = () => {
         </View>
       </View>
 
-      {/* Fixed Trial Component */}
       <View style={styles.box}>
         <Text style={styles.label}>Fixed Trial Component</Text>
 
@@ -105,7 +100,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
-    marginTop: 20,   // FIXED SPACING
+    marginTop: 20,
     color: '#0038A8',
   },
 
@@ -124,7 +119,6 @@ const styles = StyleSheet.create({
     color: '#0038A8',
   },
 
-  /* Updated search bar, with trailing icon */
   searchBar: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -143,7 +137,6 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
 
-  /* Word of the Day Card */
   wotdCard: {
     backgroundColor: '#FFFFFF',
     padding: 20,
@@ -183,16 +176,16 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
 
-  /* Reusable Promo Card */
+  /* UPDATED PROMO CARD */
   card: {
-    backgroundColor: '#E8D8FF',
+    backgroundColor: '#DDE8FF',
     padding: 20,
     borderRadius: 16,
   },
   cardImage: {
     width: '100%',
     height: 100,
-    backgroundColor: '#D3B8FF',
+    backgroundColor: '#C7D8FF',
     borderRadius: 12,
     marginBottom: 16,
   },
@@ -206,15 +199,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '500',
     marginBottom: 12,
-    color: '#444',
+    color: '#0038A8',
+    opacity: 0.9,
   },
   cardDescription: {
     fontSize: 14,
-    color: '#444',
+    color: '#0038A8',
+    opacity: 0.9,
     marginBottom: 16,
   },
   cardButton: {
-    backgroundColor: '#4A6CFF',
+    backgroundColor: '#0038A8',
     paddingVertical: 10,
     paddingHorizontal: 16,
     borderRadius: 10,
@@ -226,7 +221,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 
-  /* Fixed Trial Component */
   trialContainer: {
     backgroundColor: '#E8D8FF',
     padding: 16,

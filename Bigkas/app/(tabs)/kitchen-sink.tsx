@@ -9,14 +9,18 @@ const KitchenSink = () => {
       {/* Search Bar Preview */}
       <View style={styles.box}>
         <Text style={styles.label}>Search Bar</Text>
-        <TextInput
-          style={styles.search}
-          placeholder="Search words"
-          placeholderTextColor="#777"
-        />
+
+        <View style={styles.searchBar}>
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search words"
+            placeholderTextColor="#777"
+          />
+          <Ionicons name="search" size={20} color="#777" />
+        </View>
       </View>
 
-      {/* Word of the Day Card Preview */}
+      {/* Word of the Day Card (Front) */}
       <View style={styles.box}>
         <Text style={styles.label}>Word of the Day Card (Front)</Text>
 
@@ -34,7 +38,7 @@ const KitchenSink = () => {
         <Text style={styles.wotdDate}>Word of the Day — February 9, 2026</Text>
       </View>
 
-      {/* Word of the Day Card (Revealed State) */}
+      {/* Word of the Day Card (Revealed) */}
       <View style={styles.box}>
         <Text style={styles.label}>Word of the Day Card (Revealed)</Text>
 
@@ -83,11 +87,6 @@ const KitchenSink = () => {
           />
         </View>
       </View>
-
-      {/* Buttons, Toggles, etc. */}
-      <View style={styles.box}>
-        <Text style={styles.label}>Buttons, toggles, etc.</Text>
-      </View>
     </ScrollView>
   );
 };
@@ -120,14 +119,23 @@ const styles = StyleSheet.create({
     color: '#0038A8',
   },
 
-  /* Search */
-  search: {
+  /* Updated search bar, with trailing icon */
+  searchBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#FFFFFF',
-    padding: 12,
-    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderRadius: 12,
     borderWidth: 1,
     borderColor: '#E0E0E0',
+    marginBottom: 20,
+  },
+  searchInput: {
+    flex: 1,
+    fontSize: 16,
     color: '#444',
+    marginRight: 8,
   },
 
   /* Word of the Day Card */

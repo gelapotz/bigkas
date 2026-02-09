@@ -120,7 +120,7 @@ export default function Index() {
         </View>
 
         {/* Word Discovery */}
-        <View style={styles.promoCardLightBlue}>
+        <View style={[styles.promoCardLightBlue, { marginBottom: 48 }]}>
           <Image
             source={require('../../assets/images/discovery.jpg')}
             style={styles.promoImage}
@@ -254,15 +254,15 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#777',
     textAlign: 'center',
-    marginBottom: 28,
+    marginBottom: 48, // comfortable
   },
 
-  /* Explore More (Dark Card + Yellow CTA) */
+  /* Explore More */
   exploreContainer: {
     backgroundColor: '#0038A8',
     padding: 24,
     borderRadius: 20,
-    marginBottom: 28,
+    marginBottom: 48, // comfortable
     alignItems: 'center',
   },
   exploreTitle: {
@@ -292,27 +292,24 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 
-  /* PROMO CARDS */
+  /* Promo Cards */
   promoCardLightBlue: {
     backgroundColor: '#DDE8FF',
     borderRadius: 20,
     overflow: 'hidden',
-    marginBottom: 28,
+    marginBottom: 32, // subtle grouping
   },
 
-  /* TALLER IMAGE */
   promoImage: {
     width: '100%',
-    height: 180,   // ← increased height
+    height: 180,
   },
 
-  /* Promo Content */
   promoContent: {
     padding: 20,
     gap: 8,
   },
 
-  /* Promo Text */
   promoTitleBlue: {
     fontSize: 20,
     fontWeight: '700',
@@ -332,7 +329,6 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
 
-  /* Buttons */
   promoButtonBlue: {
     backgroundColor: '#0038A8',
     paddingVertical: 12,

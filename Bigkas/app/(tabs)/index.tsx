@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, Text, StyleSheet, TextInput, View, TouchableOpacity, Switch, Image } from 'react-native';
+import { ScrollView, Text, StyleSheet, TextInput, View, TouchableOpacity, Switch, Image, Button } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 
@@ -141,6 +141,15 @@ export default function Index() {
           </View>
         </View>
 
+        {/* REQUIRED NATIVE BUTTON */}
+        <View style={{ marginBottom: 24 }}>
+          <Button
+            title="Open Settings"
+            onPress={() => router.push('/settings')}
+            color="#0038A8"
+          />
+        </View>
+
       </ScrollView>
 
       {/* Trial Bar */}
@@ -162,15 +171,12 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-
-  /* Screen Container */
   container: {
     padding: 20,
     paddingTop: 20,
     backgroundColor: '#EEF4FF',
   },
 
-  /* App Bar */
   appBar: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -187,7 +193,6 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
 
-  /* Search Bar */
   searchBar: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -206,7 +211,6 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
 
-  /* Word of the Day */
   heroCard: {
     backgroundColor: '#FFFFFF',
     padding: 24,
@@ -254,15 +258,14 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#777',
     textAlign: 'center',
-    marginBottom: 48, // comfortable spacing
+    marginBottom: 48,
   },
 
-  /* Explore More (Dark Card + Yellow CTA) */
   exploreContainer: {
     backgroundColor: '#0038A8',
     padding: 24,
     borderRadius: 20,
-    marginBottom: 48, // comfortable spacing
+    marginBottom: 48,
     alignItems: 'center',
   },
   exploreTitle: {
@@ -292,27 +295,23 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 
-  /* PROMO CARDS */
   promoCardLightBlue: {
     backgroundColor: '#DDE8FF',
     borderRadius: 20,
     overflow: 'hidden',
-    marginBottom: 32, // subtle grouping spacing
+    marginBottom: 32,
   },
 
-  /* TALLER IMAGE */
   promoImage: {
     width: '100%',
     height: 180,
   },
 
-  /* Promo Content */
   promoContent: {
     padding: 20,
     gap: 8,
   },
 
-  /* Promo Text */
   promoTitleBlue: {
     fontSize: 20,
     fontWeight: '700',
@@ -332,7 +331,6 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
 
-  /* Buttons */
   promoButtonBlue: {
     backgroundColor: '#0038A8',
     paddingVertical: 12,
@@ -348,7 +346,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 
-  /* Trial Bar */
   trialContainer: {
     backgroundColor: '#E3EDFF',
     padding: 16,

@@ -115,7 +115,6 @@ export default function Index() {
               Answer 5 short questions based on today’s vocabulary and track your improvement.
             </Text>
 
-            {/* UPDATED ROUTE */}
             <TouchableOpacity
               style={styles.promoButtonBlue}
               onPress={() => router.push('/quiz/1')}
@@ -141,7 +140,11 @@ export default function Index() {
               Dive into definitions, examples, and usage notes to expand your understanding.
             </Text>
 
-            <TouchableOpacity style={styles.promoButtonBlue} onPress={() => router.push('/placeholder')}>
+            {/* UPDATED ROUTE */}
+            <TouchableOpacity
+              style={styles.promoButtonBlue}
+              onPress={() => router.push('/discovery')}
+            >
               <Text style={styles.promoButtonTextWhite}>Explore</Text>
             </TouchableOpacity>
           </View>

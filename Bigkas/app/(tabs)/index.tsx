@@ -18,7 +18,9 @@ export default function Index() {
 
         <Text style={styles.appBarTitle}>Bigkas</Text>
 
-        <Ionicons name="book-outline" size={26} color="#FFFFFF" />
+        <TouchableOpacity onPress={() => router.push('/modal')}>
+          <Ionicons name="information-circle-outline" size={26} color="#FFFFFF" />
+        </TouchableOpacity>
       </View>
 
       <ScrollView style={styles.container}>

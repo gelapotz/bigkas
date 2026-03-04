@@ -48,7 +48,6 @@ export default function Index() {
                 </>
               )}
 
-              {/* Icons always visible */}
               <View style={styles.heroIcons}>
                 <Ionicons name="bookmark-outline" size={24} color="#FCD116" />
                 <Ionicons name="volume-high-outline" size={24} color="#FCD116" />
@@ -69,7 +68,7 @@ export default function Index() {
 
           <TouchableOpacity
             style={styles.exploreButton}
-            onPress={() => router.push('/placeholder')}
+            onPress={() => router.push('/decks')}
           >
             <Text style={styles.exploreButtonText}>Browse Decks</Text>
           </TouchableOpacity>
@@ -91,7 +90,11 @@ export default function Index() {
               Complete this week’s set of interactive exercises and earn a progress badge! ⭐
             </Text>
 
-            <TouchableOpacity style={styles.promoButtonBlue} onPress={() => router.push('/placeholder')}>
+            {/* UPDATED ROUTE */}
+            <TouchableOpacity
+              style={styles.promoButtonBlue}
+              onPress={() => router.push('/challenge/1')}
+            >
               <Text style={styles.promoButtonTextWhite}>Play Now</Text>
             </TouchableOpacity>
           </View>
@@ -141,7 +144,6 @@ export default function Index() {
           </View>
         </View>
 
-        {/* REQUIRED NATIVE BUTTON */}
         <View style={{ marginBottom: 24 }}>
           <Button
             title="Open Settings"

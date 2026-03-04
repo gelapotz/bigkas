@@ -1,18 +1,18 @@
-import React from 'react';
+import { Stack, useLocalSearchParams } from 'expo-router';
 import { View, Text, StyleSheet } from 'react-native';
-import { useLocalSearchParams } from 'expo-router';
 
 export default function ChallengeScreen() {
-    const { id } = useLocalSearchParams<{ id: string }>();
+    const { id } = useLocalSearchParams();
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Weekly Challenge</Text>
-            <Text style={styles.body}>Challenge ID: {id}</Text>
-            <Text style={styles.body}>
-                This is a placeholder screen. You can customize it later.
-            </Text>
-        </View>
+        <>
+            <Stack.Screen options={{ title: `Challenge ${id}` }} />
+            <View style={styles.container}>
+                <Text style={styles.title}>Weekly Challenge</Text>
+                <Text style={styles.body}>Challenge ID: {id}</Text>
+                <Text style={styles.body}>This is a placeholder screen.</Text>
+            </View>
+        </>
     );
 }
 

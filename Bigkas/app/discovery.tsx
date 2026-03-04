@@ -7,18 +7,6 @@ export default function DiscoveryScreen() {
   return (
     <View style={styles.container}>
 
-      {/* App Bar */}
-      <View style={styles.appBar}>
-        <TouchableOpacity onPress={() => router.push('/settings')}>
-          <Ionicons name="settings-outline" size={24} color="#FFFFFF" />
-        </TouchableOpacity>
-
-        <Text style={styles.appBarTitle}>Bigkas</Text>
-
-        <Ionicons name="book-outline" size={24} color="#FFFFFF" />
-      </View>
-
-      {/* Content */}
       <View style={styles.content}>
         <Text style={styles.title}>Word Discovery</Text>
         <Text style={styles.subtitle}>
@@ -51,23 +39,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#EEF4FF',
   },
 
-  appBar: {
-    backgroundColor: '#0A4CB8',
-    paddingTop: 50,
-    paddingBottom: 16,
-    paddingHorizontal: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  appBarTitle: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: '#FFFFFF',
-  },
-
   content: {
     padding: 20,
+    paddingTop: 60,
   },
 
   title: {

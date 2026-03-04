@@ -1,22 +1,22 @@
 # Bigkas
 
-Bigkas (which means "speak") is a simple Tagalog learning app made for **COMP 265**. It helps beginners learn Tagalog words through a clean, friendly mobile layout inspired by dictionary apps like Merriam‑Webster. The colors are based on the **Philippine flag** (excluding red), giving the app a cultural and modern feel.
+Bigkas (which means “speak”) is a simple Tagalog learning app made for **COMP 265**. It helps beginners explore Tagalog vocabulary through a clean, mobile‑friendly interface inspired by dictionary apps. The color palette uses **blue and yellow** from the Philippine flag to give the app a cultural but modern feel.
 
 ---
 
-## What the App Does
+## Features
 
-- Shows a **Word of the Day**  
-- Lets users **browse vocabulary decks**  
-- Includes simple **practice sections** like quizzes and challenges  
-- Uses clear cards, buttons, and layouts to make learning easy  
-- Has “Coming Soon” screens for features that will be added later (I hope)
+- **Word of the Day**
+- **Vocabulary Decks** for browsing themed word groups
+- **Practice Sections** including quizzes and weekly challenges
+- Clean, card‑based layouts for easy reading
+- Placeholder “Coming Soon” screens for future expansion
 
 ---
 
-## Who the App Is For
+## Target Users
 
-Bigkas is designed for **beginners learning Tagalog** who want a simple, mobile‑friendly way to explore new words.
+Bigkas is designed for **beginners learning Tagalog** who want a simple, approachable way to build vocabulary on mobile.
 
 ---
 
@@ -26,24 +26,33 @@ Bigkas is designed for **beginners learning Tagalog** who want a simple, mobile�
 
 ---
 
-## How Users Interact With It
+## User Interaction
 
-- Tap cards to reveal meanings  
-- Press buttons to move between screens  
-- Browse decks and explore new vocabulary  
-- Use the app bar to navigate back or forward  
+- Tap cards to reveal meanings or examples  
+- Navigate between screens using buttons and links  
+- Browse decks and discovery cards  
+- Use the unified **blue app bar** to move back through the app  
+
+---
+
+## Recent Improvements
+
+- All screens now use a **consistent app bar** with the same height, color, spacing, and icon style  
+- Updated layouts to match the main screen’s design  
+- Cleaned up spacing and padding across multiple screens  
+- Improved navigation flow using Expo Router  
 
 ---
 
 ## Tools Used
 
-- **React Native (Expo)** to build the app  
-- **Expo Router** for moving between screens  
-- **@expo/vector-icons** for icons (third‑party module)
+- **React Native (Expo)**
+- **Expo Router**
+- **@expo/vector-icons**
 
 ---
 
-## How to Run the App
+## How to Run
 
 ```bash
 npm install

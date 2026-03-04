@@ -140,7 +140,6 @@ export default function Index() {
               Dive into definitions, examples, and usage notes to expand your understanding.
             </Text>
 
-            {/* UPDATED ROUTE */}
             <TouchableOpacity
               style={styles.promoButtonBlue}
               onPress={() => router.push('/discovery')}

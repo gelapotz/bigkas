@@ -10,11 +10,15 @@ export default function Index() {
   return (
     <View style={{ flex: 1 }}>
 
-      {/* App Bar */}
+      {/* Updated App Bar */}
       <View style={styles.appBar}>
-        <Ionicons name="menu" size={28} color="#FFFFFF" />
+        <TouchableOpacity onPress={() => router.push('/settings')}>
+          <Ionicons name="settings-outline" size={26} color="#FFFFFF" />
+        </TouchableOpacity>
+
         <Text style={styles.appBarTitle}>Bigkas</Text>
-        <Ionicons name="person-circle-outline" size={28} color="#FFFFFF" />
+
+        <Ionicons name="book-outline" size={26} color="#FFFFFF" />
       </View>
 
       <ScrollView style={styles.container}>
@@ -185,17 +189,16 @@ const styles = StyleSheet.create({
   },
 
   appBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingTop: 40,
-    paddingBottom: 24,
-    paddingHorizontal: 20,
     backgroundColor: '#0A4CB8',
-    elevation: 4,
+    paddingTop: 50,
+    paddingBottom: 16,
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   appBarTitle: {
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: '700',
     color: '#FFFFFF',
   },

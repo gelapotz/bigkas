@@ -1,6 +1,21 @@
-Plan ?????
-- Combine Exercise 2 stuff with this
-- Change according to previous assignment's problems
-    - Fix the top part I guess
-    - Aaaaa
-    
+## Platform
+
+The app is made for **Android** and designed to feel natural on mobile devices. The layout takes inspiration from language‑learning apps like Merriam‑Webster and Drops, focusing on clarity, readability, and simple interactions.
+
+---
+
+## User Interaction
+
+Bigkas is built around **tap‑based navigation**. Users interact with cards, buttons, and icons to explore vocabulary in quick, bite‑sized ways. The experience is intentionally simple and familiar, especially for anyone who has used modern learning apps.
+
+Recent improvements focused on making the app feel more unified. All screens now use the **same blue app bar**, with consistent spacing, icon sizes, and titles. This creates a smoother flow when moving between Home, Decks, Discovery, Word Details, Quiz, Challenges, and Settings.
+
+The app encourages learning through:
+
+- Tapping cards to reveal meanings or examples  
+- Browsing themed vocabulary decks  
+- Exploring curated words in the Discovery section  
+- Completing quizzes and weekly challenges  
+- Navigating back using the unified app bar  
+
+Overall, Bigkas offers a clean, approachable way for people to learn Tagalog in fun, manageable pieces.

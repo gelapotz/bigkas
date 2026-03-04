@@ -6,6 +6,12 @@ export default function ExploreScreen() {
     <View style={styles.container}>
       <Text style={styles.title}>Explore Words</Text>
       <Text style={styles.subtitle}>Tap a word to learn more.</Text>
+
+      <View style={styles.list}>
+        <Text style={styles.word}>Kumusta</Text>
+        <Text style={styles.word}>Salamat</Text>
+        <Text style={styles.word}>Paalam</Text>
+      </View>
     </View>
   );
 }
@@ -25,5 +31,19 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 14,
     color: '#555',
+    marginBottom: 20,
+  },
+  list: {
+    gap: 12,
+  },
+  word: {
+    fontSize: 18,
+    color: '#0038A8',
+    backgroundColor: '#FFFFFF',
+    padding: 14,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#E5EAF5',
+    fontWeight: '600',
   },
 });

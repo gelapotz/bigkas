@@ -2,16 +2,21 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 
+const DEFINITIONS: Record<string, string> = {
+    kumusta: 'A common greeting meaning "How are you?"',
+    salamat: 'A polite expression meaning "Thank you."',
+    paalam: 'A farewell expression meaning "Goodbye."',
+};
+
 export default function WordDetailsScreen() {
     const { id } = useLocalSearchParams();
+    const word = String(id);
+    const meaning = DEFINITIONS[word] || 'No definition available yet.';
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>{id}</Text>
-            <Text style={styles.subtitle}>This is the word details screen.</Text>
-            <Text style={styles.body}>
-                In the next steps, we will add real definitions and examples.
-            </Text>
+            <Text style={styles.title}>{word}</Text>
+            <Text style={styles.definition}>{meaning}</Text>
         </View>
     );
 }
@@ -27,17 +32,12 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: '700',
         color: '#0038A8',
-        marginBottom: 12,
+        marginBottom: 16,
         textTransform: 'capitalize',
     },
-    subtitle: {
-        fontSize: 16,
-        color: '#555',
-        marginBottom: 16,
-    },
-    body: {
-        fontSize: 14,
+    definition: {
+        fontSize: 18,
         color: '#333',
-        lineHeight: 20,
+        lineHeight: 24,
     },
 });

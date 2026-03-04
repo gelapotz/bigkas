@@ -90,7 +90,6 @@ export default function Index() {
               Complete this week’s set of interactive exercises and earn a progress badge! ⭐
             </Text>
 
-            {/* UPDATED ROUTE */}
             <TouchableOpacity
               style={styles.promoButtonBlue}
               onPress={() => router.push('/challenge/1')}
@@ -116,7 +115,11 @@ export default function Index() {
               Answer 5 short questions based on today’s vocabulary and track your improvement.
             </Text>
 
-            <TouchableOpacity style={styles.promoButtonBlue} onPress={() => router.push('/placeholder')}>
+            {/* UPDATED ROUTE */}
+            <TouchableOpacity
+              style={styles.promoButtonBlue}
+              onPress={() => router.push('/quiz/1')}
+            >
               <Text style={styles.promoButtonTextWhite}>Begin Quiz</Text>
             </TouchableOpacity>
           </View>

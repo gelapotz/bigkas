@@ -13,9 +13,10 @@ export default function AboutModal() {
       </Text>
 
       <Text style={styles.body}>
-        This app is part of your continuation assignment and demonstrates
-        navigation, modals, dynamic routes, and UI structure.
+        Bigkas is a Tagalog learning companion designed to help you build
+        vocabulary, improve pronunciation, and explore new words every day.
       </Text>
+
 
       <TouchableOpacity style={styles.closeButton} onPress={() => router.back()}>
         <Text style={styles.closeText}>Close</Text>

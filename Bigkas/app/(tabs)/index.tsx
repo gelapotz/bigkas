@@ -10,7 +10,7 @@ export default function Index() {
   return (
     <View style={{ flex: 1 }}>
 
-      {/* Updated App Bar */}
+      {/* App Bar */}
       <View style={styles.appBar}>
         <TouchableOpacity onPress={() => router.push('/settings')}>
           <Ionicons name="settings-outline" size={26} color="#FFFFFF" />
@@ -18,7 +18,7 @@ export default function Index() {
 
         <Text style={styles.appBarTitle}>Bigkas</Text>
 
-        <TouchableOpacity onPress={() => router.push('/modal')}>
+        <TouchableOpacity onPress={() => router.push('/(modals)/modal')}>
           <Ionicons name="information-circle-outline" size={26} color="#FFFFFF" />
         </TouchableOpacity>
       </View>

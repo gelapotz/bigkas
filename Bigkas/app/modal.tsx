@@ -1,29 +1,61 @@
-import { Link } from 'expo-router';
-import { StyleSheet } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { router } from 'expo-router';
 
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-
-export default function ModalScreen() {
+export default function AboutModal() {
   return (
-    <ThemedView style={styles.container}>
-      <ThemedText type="title">This is a modal</ThemedText>
-      <Link href="/" dismissTo style={styles.link}>
-        <ThemedText type="link">Go to home screen</ThemedText>
-      </Link>
-    </ThemedView>
+    <View style={styles.container}>
+      <Text style={styles.title}>About Bigkas</Text>
+
+      <Text style={styles.body}>
+        Bigkas is a Tagalog learning companion designed to help you build
+        vocabulary, improve pronunciation, and explore new words every day.
+      </Text>
+
+      <Text style={styles.body}>
+        This app is part of your continuation assignment and demonstrates
+        navigation, modals, dynamic routes, and UI structure.
+      </Text>
+
+      <TouchableOpacity style={styles.closeButton} onPress={() => router.back()}>
+        <Text style={styles.closeText}>Close</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    backgroundColor: '#EEF4FF',
+    padding: 24,
     justifyContent: 'center',
-    padding: 20,
   },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
+  title: {
+    fontSize: 28,
+    fontWeight: '700',
+    color: '#0038A8',
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+  body: {
+    fontSize: 16,
+    color: '#333',
+    lineHeight: 22,
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  closeButton: {
+    marginTop: 20,
+    backgroundColor: '#0038A8',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    alignSelf: 'center',
+  },
+  closeText: {
+    color: '#FFFFFF',
+    fontWeight: '700',
+    fontSize: 16,
   },
 });

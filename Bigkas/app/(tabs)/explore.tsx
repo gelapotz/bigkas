@@ -5,6 +5,7 @@ export default function ExploreScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Explore Words</Text>
+      <Text style={styles.subtitle}>Tap a word to learn more.</Text>
     </View>
   );
 }
@@ -19,5 +20,10 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: '700',
     color: '#0038A8',
+    marginBottom: 6,
+  },
+  subtitle: {
+    fontSize: 14,
+    color: '#555',
   },
 });

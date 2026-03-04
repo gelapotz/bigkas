@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { router } from 'expo-router';
 
 export default function ExploreScreen() {
   return (
@@ -8,9 +9,17 @@ export default function ExploreScreen() {
       <Text style={styles.subtitle}>Tap a word to learn more.</Text>
 
       <View style={styles.list}>
-        <Text style={styles.word}>Kumusta</Text>
-        <Text style={styles.word}>Salamat</Text>
-        <Text style={styles.word}>Paalam</Text>
+        <TouchableOpacity onPress={() => router.push('/word/kumusta')}>
+          <Text style={styles.word}>Kumusta</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => router.push('/word/salamat')}>
+          <Text style={styles.word}>Salamat</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => router.push('/word/paalam')}>
+          <Text style={styles.word}>Paalam</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

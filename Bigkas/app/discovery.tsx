@@ -7,6 +7,18 @@ export default function DiscoveryScreen() {
   return (
     <View style={styles.container}>
 
+      {/* Custom App Bar */}
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => router.back()}>
+          <Ionicons name="arrow-back" size={24} color="#0038A8" />
+        </TouchableOpacity>
+
+        <Text style={styles.headerTitle}>Discovery</Text>
+
+        {/* Spacer to balance the back button */}
+        <View style={{ width: 24 }} />
+      </View>
+
       <View style={styles.content}>
         <Text style={styles.title}>Word Discovery</Text>
         <Text style={styles.subtitle}>
@@ -37,11 +49,25 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#EEF4FF',
+    padding: 24,
+  },
+
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 24,
+  },
+  headerTitle: {
+    flex: 1,
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#0038A8',
+    marginRight: 24,
   },
 
   content: {
-    padding: 20,
-    paddingTop: 60,
+    paddingTop: 8,
   },
 
   title: {
